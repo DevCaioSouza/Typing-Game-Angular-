@@ -4,8 +4,12 @@ import { lorem } from 'faker';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'typing_game';
+  randomText = lorem.sentence();
+
+  onKeyType(value: string){
+    console.log(value)
+  }
 }

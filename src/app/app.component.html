@@ -3,10 +3,10 @@
     <div class="box column is-one-third">
       <h1 class="title has-text-centered">Typing Game</h1>
 
-      <p class="has-text-centered">Lorem ipsum dolor sit.</p>
+      <p class="has-text-centered"> {{randomText}} </p>
 
       <div class="field">
-        <input class="input" />
+        <input #userInput class="input" (input)="onKeyType(userInput.value)" />
       </div>
 
       <div class="box has-text-centered">
