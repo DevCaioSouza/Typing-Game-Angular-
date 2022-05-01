@@ -13,4 +13,12 @@ export class AppComponent {
   onKeyType(value: string) {
     this.enteredText = value;
   }
+
+  compare(randomLetter: string, enteredLetter: string){
+    if(!enteredLetter){
+      return 'pending'
+    }
+
+    return randomLetter === enteredLetter ? 'correct' : 'incorrect'
+  }
 }
